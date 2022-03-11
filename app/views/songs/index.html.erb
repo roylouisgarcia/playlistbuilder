@@ -1,0 +1,34 @@
+
+<div id="songs">
+
+<table class="table table-primary table-striped table-bordered">
+<thead class="thead-dark">
+<tr>
+  <th scope="col">Title
+  </th>
+  <th scope="col">Artist</th>
+  <th scope="col"></th>
+  <th scope="col"></th>
+  <th scope="col"></th>
+</tr>
+
+</thead>
+
+<tbody>
+ <% @songs.each do |song| %>
+  <tr>
+    <th scope="row"><%= song.title %></th>
+    <td><%= song.artist %></td>
+    <td><%= link_to "Youtube", song.youtubevideo, class: "btn btn-danger", target: "_blank" %></td>
+    <td><%= link_to "Lyrics", song.lyrics, class: "btn btn-warning", target: "_blank" %></td>
+    <td><%= link_to "Show this song", song, class: "btn btn-dark" %></td>
+  </tr> 
+  <% end %>
+</tbody>
+
+</table>
+</div>
+
+
+
+<%= link_to "New song", new_song_path, class: "btn btn-primary" %>

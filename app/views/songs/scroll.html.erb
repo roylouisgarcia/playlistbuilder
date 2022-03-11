@@ -1,0 +1,20 @@
+<div id="scroll">
+
+<% counter = 0 %>
+ <% @songs.each do |song| %>
+ <% counter = counter + 1 %>
+     <% if counter == 1 %>
+      <div class="box show">  
+         <%= render song %>
+         </div>
+         <% else %>
+      <div class="box">  
+     <%= render song  %>
+     </div>
+     <% end %>
+ <% end %> 
+</div>
+
+
+
+<%= link_to "See All Songs", songs_path, class: "btn btn-primary" %>
