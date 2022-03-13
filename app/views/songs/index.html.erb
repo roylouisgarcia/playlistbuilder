@@ -1,12 +1,13 @@
 
 <div id="songs">
 
-<table class="table table-primary table-striped table-bordered">
+<table class="table table-light table-striped table-bordered">
 <thead class="thead-dark">
 <tr>
   <th scope="col">Title
   </th>
   <th scope="col">Artist</th>
+  <th scope="col">Curator</th>
   <th scope="col"></th>
   <th scope="col"></th>
   <th scope="col"></th>
@@ -19,6 +20,7 @@
   <tr>
     <th scope="row"><%= song.title %></th>
     <td><%= song.artist %></td>
+    <td><%= song.user_id %></td>
     <td><%= link_to "Youtube", song.youtubevideo, class: "btn btn-danger", target: "_blank" %></td>
     <td><%= link_to "Lyrics", song.lyrics, class: "btn btn-warning", target: "_blank" %></td>
     <td><%= link_to "Show this song", song, class: "btn btn-dark" %></td>
