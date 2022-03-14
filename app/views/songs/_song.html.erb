@@ -11,12 +11,13 @@
 
   <p>
     <strong>Youtube Video:</strong>
-     <a href="<%= song.youtubevideo %>" target="_blank"><%= song.youtubevideo %></a>
+     <%= song.youtubevideo %>  <%= link_to "Visit", song.youtubevideo, class: "btn btn-light btn-sm", target: "_blank" %>
   </p>
 
   <p>
     <strong>Lyrics:</strong>
-    <a href="<%= song.lyrics %>" target="_blank"><%= song.lyrics %></a>
+     <%= song.lyrics %>  <%= link_to "Visit", song.lyrics, class: "btn btn-light btn-sm", target: "_blank" %>
+    
   </p>
       <br>
 </div>

@@ -2,8 +2,7 @@
 <%= render @song %>
 </div>
 <div>
-  <%= link_to "Edit this song", edit_song_path(@song), class: "btn btn-secondary" %> 
-  <%= link_to "Back to songs", songs_path, class: "btn btn-secondary" %>
+  <%= link_to "Edit this song", edit_song_path(@song), class: "btn btn-success" %> 
+  <%= link_to "Back to songs", songs_path, class: "btn btn-warning" %>
 <br/>
-  <%= button_to "Destroy this song", @song, method: :delete, class: "btn btn-danger"  %>
 </div>
